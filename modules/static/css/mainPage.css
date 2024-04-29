@@ -1,0 +1,262 @@
+
+.pagination {
+    margin: 30px;
+}
+.pages {
+    background-color:#000000;
+    padding: 3px 7px;
+    border: 1px solid #5C5DE3;
+    border-radius: 2px;
+}
+.pagination > a:hover {
+    background-color: #5C5DE3;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.tweet{
+    background-color: #000000;
+}
+.active_page {
+    background-color: #5C5DE3;
+    transition: 0.2s;
+    cursor: pointer;
+    padding: 3px 7px;
+    border: 1px solid #5C5DE3;
+    border-radius: 2px;
+}
+.container {
+    display: flex;
+    background-color: #000000;
+}
+.navbar {
+    width: 25%;
+    padding-top: 10px;
+    text-align: right;
+    border-right: 1px solid gray;
+    height: 150vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.navbar ul > li {
+    width: centre;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: 8rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.navbar ul > li :hover {
+    width: centre;
+    color: dodgerblue;
+    transition: 0.2s;
+}
+.navbar ul > li > img {
+    width: 25px;
+    height: auto;
+    margin-right: 1.5rem;
+    padding-bottom: 2px;
+}
+
+.deactivate {
+    text-align: center;
+    color: tomato;
+}
+
+.posts {
+    border-right: 1px solid grey;
+    width: 70%; /* Keep width for wide view */
+}
+
+.greeting {
+    border-bottom: 1px solid gray;
+    background-color: #000000;
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 18px;
+    top: 0;
+}
+
+.info {
+    padding: 20px;
+    width: 20%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.notice {
+    padding: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.light {
+    font-size: 15px;
+    color: gray;
+}
+.username {
+    font-size: 0.9em;
+}
+.username:hover {
+    text-decoration: underline;
+}
+.thumbnail {
+    width:50px;
+    height: 50px;
+    border-radius:50%;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.filter_white {
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(165deg) brightness(103%) contrast(107%);
+    width: 20px; height: auto; margin-right: 30px;
+}
+
+.empty {
+    margin-top: 50px;
+    text-align: center;
+}
+.empty > img {
+    width: 200px;
+    height: auto;
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin at the bottom to separate from navbar */
+    height: 50px;
+    width: centre;
+}
+@media screen and (max-width: 768px) {
+    .navbar ul > li > a {
+        font-size: 0; /* Set font size to 0 to hide text */
+        visibility: hidden; /* Hide the element but keep its space */
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #000; /* Add background color if needed */
+        border-bottom: 1px solid gray;
+    }
+
+    .navbar .logo-container {
+        padding: 10px 20px; /* Add padding to the logo container */
+    }
+
+    .nav-items {
+        padding: 10px 20px; /* Add padding to the nav items container */
+    }
+
+    .posts {
+        padding-top: 70px; /* Add top padding to the content to avoid overlap with fixed navbar */
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+
+    .nav-items {
+        padding-top: 1rem;
+        width: 100%; /* Take up full width */
+        text-align: center; /* Center the text inside */
+    }
+
+    .navbar ul {
+        padding: 0; /* Remove default padding */
+        list-style-type: none; /* Remove default list styling */
+        display: inline-block; /* Prevent line breaks */
+    }
+
+    .navbar ul > li {
+        margin-right: 21px; /* Add spacing between items */
+    }
+
+    .navbar ul > li:last-child {
+        margin-right: 0; /* Remove margin from the last item */
+    }
+
+    .navbar ul > li > a {
+        font-size: 0; /* Set font size to 0 to hide text */
+        visibility: hidden; /* Hide the element but keep its space */
+    }
+
+    .navbar ul > li > img {
+        margin: 0; /* Remove any existing margin */
+        width: 25px; /* Set the width of the images */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul > li > a {
+        display: none; /* Hide text from navbar links */
+    }
+
+    .navbar ul > li > img {
+        margin: 0; /* Remove margin from images */
+    }
+
+    .navbar ul > li {
+        margin-right: 10px; /* Adjust spacing between items */
+    }
+
+    .logo-container {
+        margin-bottom: 0; /* Remove margin at the bottom */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .navbar {
+        width: 100%; /* Take up full width on smaller screens */
+        border-right: none; /* Remove right border on smaller screens */
+        overflow-x: auto; /* Add horizontal scrolling */
+        height: auto; /* Adjust height to fit content */
+        white-space: nowrap; /* Prevent line breaks */
+    }
+
+    .navbar ul {
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+        display: inline-block; /* Ensure the navbar doesn't collapse */
+        white-space: nowrap; /* Prevent line breaks */
+        overflow-x: auto; /* Add horizontal scrolling */
+    }
+
+    .navbar ul > li {
+        display: inline-block; /* Display list items horizontally */
+        margin-right: 20px; /* Adjust spacing between items */
+    }
+
+    .navbar ul > li > a {
+        display: block; /* Make links take up full width of list item */
+        padding: 10px; /* Add padding to improve touch target */
+        text-align: center; /* Center-align links */
+    }
+
+    .navbar ul > li > img {
+        display: block; /* Ensure images are displayed properly */
+        margin: 0 auto; /* Center-align images */
+    }
+
+    .posts {
+        width: 100%; /* Take up full width on smaller screens */
+        border-right: none; /* Remove right border on smaller screens */
+    }
+
+    .info,
+    .notice {
+        width: 100%; /* Take up full width on smaller screens */
+    }
+}

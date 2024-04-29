@@ -1,0 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #5C5DE3;
+}
+.container {
+    width: 50%;
+    margin: auto;
+    margin-top: 15%;
+    background-color: #070707;
+    padding:30px;
+    border-radius: 20px;
+    text-align: center;
+}
+.twitter {
+    width: 100px;
+    height: auto;
+}
